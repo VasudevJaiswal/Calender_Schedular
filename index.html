@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="evo-calendar.min.css">
+  <link rel="stylesheet" href="evo-calendar.midnight-blue.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hero">
+    <div id="calendar"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="evo-calendar.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#calendar").evoCalendar({
+        theme: "Midnight Blue",
+        calendarEvents: [
+          {
+            id: 'event1', // Event's ID (required)
+            name: "New Year", // Event name (required)
+            date: "January/1/2022", // Event date (required)
+            description: "Happy New Year!",
+            type: "holiday", // Event type (required)
+            everyYear: true // Same event every year (optional)
+          },
+          {
+            id: 'event2', // Event's ID (required)
+            name: "MLH INIT 2022", // Event name (required)
+            date: "June/27/2021", // Event date (required)
+            description: "Happy Hacking!",
+            type: "holiday", // Event type (required)
+            everyYear: false // Same event every year (optional)
+          },
+          {
+            id: 'event3', // Event's ID (required)
+            name: "Your Birthday", // Event name (required)
+            date: "
+            August/15/2021", // Event date (required)
+            description: "Happy Birthday!",
+            type: "holiday", // Event type (required)
+            everyYear: true // Same event every year (optional)
+          },
+          {
+            name: "Vacation Leave",
+            badge: "02/13 - 02/15", // Event badge (optional)
+            date: ["February/13/2022", "February/15/2022"], // Date range
+            description: "Vacation leave for 3 days.", // Event description (optional)
+            type: "event",
+            color: "#63d867" // Event custom color (optional)
+          }
+        ]
+      });
+
+    })
+  </script>
+</body>
+
+</html>
